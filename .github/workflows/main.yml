@@ -29,11 +29,11 @@ jobs:
         pip install -r requirements.txt
     - name: 'signin'
       env:
-        USERNAME: ${{ 2022110106 }}
-        PASSWORD: ${{ Zmf1124072183 }}
-        AREA: ${{ 北京市+海淀区 }}
-        PROVINCE: ${{ 北京市 }}
-        CITY: ${{ 北京市 }}
-        SFZX: ${{ 1 }}
+        USERNAME: ${{ secrets.USERNAME }}
+        PASSWORD: ${{ secrets.PASSWORD }}
+        AREA: ${{ secrets.AREA }}
+        PROVINCE: ${{ secrets.PROVINCE }}
+        CITY: ${{ secrets.CITY }}
+        SFZX: ${{ secrets.SFZX }}
       run: python auto.py
 
